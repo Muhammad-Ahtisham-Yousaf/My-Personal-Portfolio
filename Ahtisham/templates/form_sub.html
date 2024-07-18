@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block 'title' %}Form Submition{% endblock  %}
+
+{% block 'style' %}
+<link rel="stylesheet" href="{% static 'css/businiss.css' %}">
+
+{% comment %} <style>
+.heading {
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+</style> {% endcomment %}
+<!-- {% comment %} <link rel="stylesheet" href="{% static 'css/businiss.css' %}"> {% endcomment %} -->
+
+{% endblock  %}
+
+{% block 'content' %}
+<section >
+    <div class="for-sub">
+   <h1 class = "heading">Form Submited Successfully</h1>
+   </div>
+</section>
+{% endblock  %}

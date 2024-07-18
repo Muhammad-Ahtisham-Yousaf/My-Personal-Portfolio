@@ -1,0 +1,172 @@
+{% load static %}
+
+ {% comment %} <link rel="stylesheet" href="{% static 'css/businiss.css' %}">  {% endcomment %}
+<style>
+.header {
+    position:sticky;
+    width: 100%;
+    background-color:var(--main-color);
+    /* background-color:rgba(0, 0, 0, 0.7); */
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(40px);
+    box-shadow: rgba(0, 0, 0, 0.99) 0px 16px 50px 4px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 100;
+    transition:  0.1s ease;
+  }
+
+  
+  .logo{
+    font-size: 3rem;
+    font-weight: 800;
+    color:black;
+    /* color:var(--text-color); */
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .logo span {
+    color:white;
+    font-weight: 600;
+  }
+  .logo:hover {
+    transform: scale(1.1)
+    
+    /* transition:  0.5s ease-in;  */
+
+  }
+  .navbar ul {
+    list-style-type: none;
+    padding:3px;
+    
+  }
+  
+  .navbar ul li {
+    display: inline;
+  }
+  
+  .navbar ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    /* background-color: #ffd723; */
+    color:white;
+    text-decoration: none;
+    padding: 1px 7px;
+    transition:  0.3s ease-in-out;
+  }
+  
+  .navbar ul li a:hover {
+    border-bottom: 1px solid white;
+    transform: scale(1.1);
+
+  }
+ 
+  .hideSidebar {
+    display: none;
+  }
+  .showSidebar {
+    font-size: 4px;
+    display: none;
+  }
+  /* svg {
+    display: none;
+  } */
+
+  @media  screen and (max-width: 900px){
+    .header {
+        border-bottom-right-radius: 0px;
+      }
+  }
+
+  @media  screen and (max-width: 800px){
+    #menu-icon{
+      display: block;
+     }
+     .navbar {
+      position: absolute;
+      top:0;
+      right: 0;
+      /* border-left: 2px solid white; */
+      border-bottom: 2px solid white;
+      border-bottom-left-radius: 6px;
+      padding:4rem 5%;
+      background-color:var(--main-color);
+      color:white;
+      display:none;
+     }
+     .navbar.active {
+      display: block;
+     }
+     .navbar a {
+      display: block;
+      font-size: 1px;
+      margin:3rem 0;
+      color:white;
+     }
+     .hideSidebar {
+      display:flex;
+      position: absolute;
+      left:60%;
+      top:20px;
+     }
+     .showSidebar {
+      display: flex;
+      
+     }
+  }
+</style>
+    <header class="header">
+       
+        <a href="#home" class="logo">Ahtisham
+            <span>Yousaf</span>
+        </a>
+        
+  <!-- <i class="fa-solid fa-bars" id="menu-icon"></i> -->
+ <nav class="navbar" id="navbar">
+  <div class="hideSidebar"  onclick=" hideSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
+    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>  </div>
+    <ul>
+        <li><a href="{% url 'Portfolio'  %}" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    
+ </nav>
+ <div class="showSidebar" onclick="showSidebar()"> 
+  <!-- <i class="fa-solid fa-bars"></i> -->
+  <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28"> 
+ <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg> 
+</div>
+
+</header> 
+<script>
+  let navbar= document.querySelector('.navbar');
+
+function showSidebar() {
+    const sidebar = document.querySelector('.navbar');
+    if (sidebar) {
+        sidebar.style.display = 'flex';
+      
+    } else {
+        console.error('Element with class "navbar" not found.');
+    }
+}
+
+function hideSidebar() {
+    const sidebar = document.querySelector('.navbar');
+    if (sidebar) {
+        sidebar.style.display = 'none';
+    } else {
+        console.error('Element with class "navbar" not found.');
+    }
+}
+
+</script>
+

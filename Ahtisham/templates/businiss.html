@@ -1,0 +1,392 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'title' %}Ahtisham Yousaf{% endblock  %}
+{% block 'style' %}
+<link rel="stylesheet" href="{% static 'css/businiss.css' %}">
+
+
+{% endblock  %}
+{% block 'content' %}
+  {% comment %} {% include "_navbar.html" %} {% endcomment %}
+  <section class="home" id="home">
+    <div class="home-content">
+        <h1>Hi,It's <span>Muhammad Ahtisham</span></h1>
+          <h3 class="text-animation">
+              I'm a <span></span>
+          </h3>
+          <p>
+            I am an experienced front-end and back-end developer with a strong proficiency in Django and Python.
+            Over the years, I have successfully developed a range of projects, including a sophisticated eCommerce store,
+            a comprehensive job portal, and a personal portfolio. My work is characterized by a meticulous attention to detail,
+            unwavering focus, and a commitment to consistency and hard work.
+          </p>
+
+          <!-- <div class="social-icons">
+              <a href="https://www.facebook.com/sham.mayo.792/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://github.com/Muhammad-Ahtisham-Yousaf"><i class="fa-brands fa-github"></i></a>
+              {% comment %} <a href="+923147358828"><i class="fa-brands fa-whatsapp"></i></a> {% endcomment %}
+              <a href="https://www.linkedin.com/in/m-ahtisham-yousaf-108a91260/"><i class="fa-brands fa-linkedin"></i></a>
+          </div> -->
+          <ul class="socials">
+            <li class="icon-content">
+              <a href="https://www.linkedin.com/in/m-ahtisham-yousaf-108a91260/" aria-label="LinkedIn"data-social="linkedin">
+                <div class="filled"></div>
+                <i class="fa-brands fa-linkedin"></i>
+        
+              </a>
+              <div class="tooltip">LinkedIn</div>
+            </li>
+            <li class="icon-content">
+              <a href="https://github.com/Muhammad-Ahtisham-Yousaf" aria-label="GitHub" data-social="github">
+                <div class="filled"></div>
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <div class="tooltip">GitHub</div>
+            </li>
+        
+            <li class="icon-content">
+              <a href="https://www.facebook.com/sham.mayo.792/" aria-label="Facebook" data-social="facebook">
+                <div class="filled"></div>
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <div class="tooltip">Facebook</div>
+            </li>
+          </ul>
+          
+         <button class="btn" > <a href="#" >Hire
+              <i class="fa-solid fa-briefcase"></i>
+              </a>
+        </button>
+
+    </div>
+    <div class="home-img">
+        <img src="{% static 'images/ahtisham_collage.jpg' %}" alt="Profile-Image">
+    </div>
+</section>
+  <section class="services" id="services">
+    <h2 class="heading"> Services</h2>
+      <div class="service-container">
+          <div class="services-box">
+            <i class="fa-solid fa-palette"></i>
+              <h3>
+                Frontend Developement
+              </h3>
+              <p> I specialize in making websites look great and easy to use. <br>
+                 I focus on creating designs that are not only attractive but 
+                 also work smoothly on phones, tablets, and computers. <br>
+                 Let's build a website that makes your business shine online!
+
+              </p>
+              <a href="#" class="btn">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="services-box">
+            <i class="fa-solid fa-server"></i>
+            <h3>
+              Backend Developement
+            </h3>
+            <p>
+              I specialize in backend development,<br> where I create the engines that power websites and applications. <br>
+              From handling data securely to making sure everything runs smoothly behind the scenes. <br>  Let's work together to build a strong foundation for your digital success!
+            </p>
+            <a href="#" class="btn">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="services-box">
+          <i class="fa-solid fa-code"></i>
+          <h3>
+            Django Web Developement
+          </h3>
+          <p>
+            I specialize in creating custom web applications using Django. <br>
+            Whether you need a secure login system, a user-friendly interface, or powerful backend functionality. <br>
+             I'm here to bring your ideas to life with Django's versatility and reliability. <br> Let's collaborate and 
+             build something amazing together!   
+          </p>
+          <a href="#" class="btn">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      </div>
+  </section>
+  {% comment %} projects {% endcomment %}
+  <section id="projects" class="projects">
+    <h2 class="heading">Projects</h2>
+      <div class="proj-container">
+
+        <div class="project-box">
+          <img src="{% static 'images/pngtree-web-development-illustra.png'%}" alt="Project Image">
+           <div class="proj-content">
+              <h4>JOB PORTAL</h4>
+                <p>
+                  Developed a user-friendly JobPortal using Django and Python, 
+                  featuring secure user authentication, advanced job search, profile management, and an admin dashboard for efficient site management.
+               </p>
+           </div>       
+           <button class="btn"> <a href="https://github.com/Muhammad-Ahtisham-Yousaf/Job-Portal"> GitHub </a></button>
+        </div>
+
+        <div class="project-box">
+          <img src="{% static 'images/best web developer.png'%}" alt="Project Image">
+          
+            <div class="proj-content">
+              <h4>ECOMMERCE STORE</h4>
+                <p>Built an eCommerce store with Django and Python. 
+                  It includes secure logins, product listings,a shopping cart,order management,and an easy-to-use admin dashboard.</p>
+           </div>
+           <button class="btn">GitHub</button>
+
+        </div>
+
+        <div class="project-box">
+          <img src="{% static 'images/illustration-of-web-development.png'  %}" alt="Project Image">
+            <div class="proj-content">
+              <h4>PERSONAL PORTFOLIO</h4>
+                <p>Created a personal portfolio using Django and Python. It showcases my projects, skills,
+                   and experience with an easy-to-navigate design and secure contact form.</p>
+            </div>
+           <button class="btn"> <a href="https://github.com/Muhammad-Ahtisham-Yousaf/My-Personal-Portfolio">  GitHub </a> </button>
+        </div>
+    </div>
+  </section>
+
+  <section class="timeline-section" id="education" >
+    <h2 class="heading">Education</h2>
+    <div class="timeline-items">
+      <div class="timeline-item"> 
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2010-2015</div>
+        <div class="timeline-content">
+          <h3>Middle School</h3>
+          <p>I attended Government High School, where I consistently achieved first position from first to fifth grade.
+
+            </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2015-2020</div>
+        <div class="timeline-content">
+          <h3>Metriculation </h3>
+          <p>From 2015 to 2020, I attended <a href="https://www.facebook.com/sgschools.edu.pk/">Suffah Grammar Schools</a> 
+            .I achieved 1074 out of 1100 marks and won a bicycle from my school for my performance.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2020-2022</div>
+        <div class="timeline-content">
+          <h3>Intermediate</h3>
+          <p>
+            
+            I completed my Intermediate studies at <a href="https://www.facebook.com/PGCWorld/">Punjab Collage Campus 8-C Canal Road,</a>
+             about 25 km from my home. The long daily travel was tough, but it taught me to stay dedicated and persistent.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2023-2024</div>
+        <div class="timeline-content">
+          <h3>Python Programming Course</h3>
+          <p>
+            
+            I earned a diploma in Python Web Development from<a href="https://www.azadchaiwala.com/">Azad Chaiwala Institute</a> after fulfilling all the requirements.</p>
+        </div>
+        
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2024</div>
+        <div class="timeline-content">
+          <h3>Projects</h3>
+          <p>I have successfully developed a range of projects, including a sophisticated eCommerce store,
+            a comprehensive job portal, and a personal portfolio.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <section id="certificate">
+    <h2 class="heading">Certificate</h2>
+    <div>
+      <img src="{% static 'images/certificate.png' %}" alt="Certificate">
+    </div>
+  </section>
+
+  {% comment %} my mentors {% endcomment %}
+   
+  <section class="mentors"  id= "mentors">
+    <h2 class="heading">My Mentors</h2>
+ <div class="ment-container">
+
+    <div class="card">
+      <div class="card-info">
+      <div class="card-avatar">
+        <!-- <img src="{% static '/images/Irfan_malik.jpg' %}" alt="Zeeshan Usmaini"> -->
+      </div>
+      <div class="card-title">Zeeshan Usmain</div>
+      <div class="card-subtitle">Data Scientist,Scholar &amp; Writer  </div>
+      </div>
+      <ul class="card-social">
+        <li class="card-social__item">
+        <a href="facebook.com/zusmani78">  <i class="fa-brands fa-facebook-f"></i></a>
+       </li>
+       <li class="card-social__item"> 
+       <a href="https://www.youtube.com/@zusmani78"> <i class="fa-brands fa-youtube"></i></a>
+        </li>
+      <li class="card-social__item">
+        <a href="linkedin.com/in/zusmani">  <i class="fa-brands fa-linkedin-in"></i></a>
+      </li>
+      </ul>
+    </div>
+<!-- 2 -->
+<div class="card">
+  <div class="card-info">
+  <div class="card-avatar"></div>
+  <div class="card-title">Irfan Malik</div>
+  <div class="card-subtitle">Data Scientist &amp; <a href="https://www.xevensolutions.com/">Founder of Xeven Solutions</div></a>
+  </div>
+  <ul class="card-social">
+    <li class="card-social__item">
+      <a href="facebook.com/iamirfansaeedmalik"><i class="fa-brands fa-facebook-f"></i></a>
+   </li>
+   <li class="card-social__item"> 
+   <a href="https://www.youtube.com/@muhammadirfanmalik"> <i class="fa-brands fa-youtube"></i></a>
+    </li>
+  <li class="card-social__item">
+    <a href="linkedin.com/in/muhammadirfanmalik"> <i class="fa-brands fa-linkedin-in"></i></a>
+  </li>
+  </ul>
+</div>
+
+<!-- 3 -->
+<div class="card">
+  <div class="card-info">
+  <div class="card-avatar"></div>
+  <div class="card-title">Mufti Tariq Masood</div>
+  <div class="card-subtitle">An Islamic Scholar</div>
+  </div>
+  <ul class="card-social">
+    <li class="card-social__item">
+      <a href="facebook.com/asktariqmasood">    <i class="fa-brands fa-facebook-f"></i></a>
+   </li>
+   <li class="card-social__item"> 
+   <a href="https://www.youtube.com/@MuftiTariqMasoodSpeeches"> <i class="fa-brands fa-youtube"></i></a>
+    </li>
+  <li class="card-social__item">
+    <a href="instagram.com/mufti_tariq_masood">  <i class="fa-brands fa-instagram"></i></a>
+  </li>
+  </ul>
+</div>
+
+<!-- 4 -->
+<div class="card">
+  <div class="card-info">
+  <div class="card-avatar"></div>
+  <div class="card-title">Azad Chaiwala</div>
+  <div class="card-subtitle">British-Pakistani Entrepreneur &amp; YouTuber</div>
+  </div>
+  <ul class="card-social">
+  <li class="card-social__item">
+    <a href="facebook.com/AzadChaiwala"> <i class="fa-brands fa-facebook-f"></i></a>
+ </li>
+ <li class="card-social__item"> 
+ <a href="https://www.youtube.com/@AzadChaiwala"> <i class="fa-brands fa-youtube"></i></a>
+  </li>
+<li class="card-social__item">
+  <a href="linkedin.com/in/azad-chaiwala"> <i class="fa-brands fa-linkedin-in"></i></a>
+</li>
+</ul>
+</div>
+    <!-- <div class="ment-container">
+      <div class="img1">
+        <img src="{% static 'images/Zeshan_usmani.jpg' %}" alt="Zeshan Usmani" >
+        <p>  <a href="https://www.youtube.com/@zusmani78">Zeshan Usmani</a></p>
+      </div>
+      <div class="img2">
+        <img src="{% static 'images/Irfan_malik.jpg' %}" alt="Irfan Malik" >
+        <p>   <a href="https://www.youtube.com/@muhammadirfanmalik">Irfan Malik</a></p>
+      </div>
+      <div class="img3">
+        <img src="{% static 'images/Mufti_tariq_masood.jpg' %}" alt="Mufti Tariq Masood" >
+        <p>  <a href="https://www.youtube.com/@MuftiTariqMasoodSpeeches">Mufti Tariq Masood</a></p>
+      </div>
+      <div class="img4">
+        <img src="{% static 'images/Azad_chaiwala.jpg' %}" alt="Azad Chaiwala" >
+       <p> <a href="https://www.youtube.com/@AzadChaiwala">Azad Chaiwala</a></p>
+      </div>
+  </div> -->
+</div>
+  </section>
+  <section id="contact" class="contact">
+    <h2 class="heading">Contact</h2>
+    <form action="#" method ="POST">
+      {% csrf_token %}
+      <div class="input-box">
+        {% comment %} <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email"> {% endcomment %}
+        {{client.full_name}}
+        {{client.email}}
+      </div>
+      <div class="input-box">
+        {% comment %} <input type="number" placeholder="Phone Number"> {% endcomment %}
+        {{client.phone}}
+        {{client.subject}}
+        {% comment %} <input type="text" placeholder="Subject"> {% endcomment %}
+      </div>
+      {{client.message}}
+      {% comment %} <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea> {% endcomment %}
+       
+      <button  class="btn"> <p class="submit">Send Request <i class="fas fa-arrow-right"></i></p></button>
+    </form>
+  </section>
+  <footer class="footer">
+
+    <ul class="socials">
+      <li class="icon-content">
+        <a href="https://www.linkedin.com/in/m-ahtisham-yousaf-108a91260/" aria-label="LinkedIn"data-social="linkedin">
+          <div class="filled"></div>
+          <i class="fa-brands fa-linkedin"></i>
+  
+        </a>
+        <div class="tooltip">LinkedIn</div>
+      </li>
+      <li class="icon-content">
+        <a href="https://github.com/Muhammad-Ahtisham-Yousaf" aria-label="GitHub" data-social="github">
+          <div class="filled"></div>
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <div class="tooltip">GitHub</div>
+      </li>
+  
+      <li class="icon-content">
+        <a href="https://www.facebook.com/sham.mayo.792/" aria-label="Facebook" data-social="facebook">
+          <div class="filled"></div>
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <div class="tooltip">Facebook</div>
+      </li>
+    </ul>
+    <ul class="list">
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="{% url 'About_Me' %}">About Me</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Privacy and Policy</a></li>
+    </ul>
+    <p class="copywright">
+      &#169; 2024 Designed with <i class="fa-solid fa-heart heart"></i> by Ahtisham Yousaf
+    </p>
+  </footer>
+
+  {% endblock  %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{% static 'js/scripts.js' %}">
+
+</script>
+
