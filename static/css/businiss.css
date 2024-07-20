@@ -35,26 +35,14 @@ html{
 body {
 width: 100%;
 height: 100%;
-/* Add your background pattern here */
- /* background: repeating-radial-gradient(
-  circle,
-  #000,
-  #000 5px,
-  transparent 6px
-);
-background-size: 20px 20px;
-*/
-
 background: white;
 color: var(--black-text)
 }
 
 
 section{
-
   min-height: 100vh;
   padding:8rem 9% ;
-  
 }
 .home{
   display: flex;
@@ -92,7 +80,7 @@ span{
   line-height: 1.3;
 }
 .home-content p {
-  font-size: 1.5rem;
+  font-size: 17px;
   opacity: 0.8;
   font-weight: 500;
   color:var(--black-text);
@@ -331,7 +319,7 @@ ul {
   }
 }
 .heading{
-  color:var(--main-color);
+color:var(--main-color);
 text-align: center;
 font-size: 8rem;
 margin-top: -30px;
@@ -357,7 +345,7 @@ display: flex;
 flex-direction: column;
 justify-content: flex-start;
 text-align:start;
-padding:8px 14px ;
+padding:20px ;
 width: 100%;
 height: 450px;
 max-width: 310px;
@@ -437,8 +425,10 @@ width: 30px;
   border-radius: 10px;
   backdrop-filter: blur(40px);
   background-color: rgba(75, 75, 75, 0.11);
-  height: 500px;
-  width: 350px;
+  max-height: 570px;
+  min-height:550px;
+  max-width: 350px;
+  min-width:330px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 
@@ -465,11 +455,11 @@ width: 30px;
   font-size: 20px;
   color:var(--main-color);
   margin: 6px;
-  text-transform: capitalize;
+  font-weight: 500;
  
 }
 .proj-content h4:hover {
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
 }
 
 .proj-content p {
@@ -592,7 +582,7 @@ flex-direction: column;
 }
 #certificate img {
 height: 100%;
-max-width:700px;
+width:700px;
 border:9px solid var(--main-color);
 border-radius: 7px;
 
@@ -609,7 +599,7 @@ width: 200px;
 height: 260px;
 background: #f5f5f5;
 padding: 2rem 1.5rem;
-transition: box-shadow .3s ease, transform .2s ease;
+transition: box-shadow .2s ease, transform .2s ease;
 }
 
 .card-info {
@@ -629,8 +619,6 @@ border-bottom: 1px solid black;
 /*Image*/
 .card-avatar {
 --size: 120px;
-/* background: linear-gradient(to top, #f1e1c1 0%, #fcbc97 100%); */
-/* background-image: url("/static/images/Zeshan_usmani.jpg"); */
 width: var(--size);
 height: var(--size);
 border-radius: 5%;
@@ -681,6 +669,8 @@ color:black;
 font-size: 25px;
 cursor: pointer;
 transition: fill 0.2s ease ,transform 0.2s ease;
+margin-bottom: -20px;
+
 }
 
 /*Text*/
@@ -688,7 +678,6 @@ transition: fill 0.2s ease ,transform 0.2s ease;
 color: #333;
 font-size: 15px;
 font-weight: 600;
-line-height: 2rem;
 }
 
 .card-subtitle {
@@ -753,6 +742,10 @@ transform: scale(1.1);
   margin:1rem 0 ;
   resize: horizontal;
   font-size: 16px;
+  border-bottom: 2px solid transparent;
+}
+.contact form .input-box input:hover {
+  border-bottom: 2px solid var(--main-color);
 }
 .contact form {
   margin-top: 2rem;
@@ -957,22 +950,26 @@ html {
     .proj-container {
       flex-wrap: wrap;
     }
-     .proj-container .project-box{
-      margin:10px 2px;
-     }
+   
 }
 /* Media Query for Mobile Screens */
 @media  screen and (max-width: 800px) {
-  
+  .heading{
+font-size: 6rem;
+
+}
   .home {
       display: inline-block;
       margin:1rem
   }
   .home-content h1 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   .home-content h3 {
-    font-size:3rem;
+    font-size:2.5rem;
+  }
+   .home-content p {
+    font-size: 14px;
   }
   .home-img{
       width:100%;
@@ -1003,14 +1000,25 @@ html {
   }
   .services-box,
   .project-box ,
-  .timeline-content p {
-    font-size: 14px;
+  .timeline-content,
+  .home-content p {
+    font-size: 15px;
   }
   .services h2 {
     font-size: 6rem;
   }
+  .services-box {
+       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+  
+  .services-box:hover {
+      box-shadow:0 0 0 0;
+  }
   .projects h2 {
     font-size: 6rem;
+  }
+  .project-box:hover {
+   transform: translateY(0px);
   }
   /* .project-box h4 {
     font-size: 3rem;
@@ -1045,7 +1053,7 @@ html {
       color:var(--main-color);
   }
   #certificate img {
-    width: 450px;
+    width: 350px;
 
   }
 
@@ -1061,7 +1069,4 @@ html {
   .contact form {
     padding:10px
   }
-
-
-
 }
